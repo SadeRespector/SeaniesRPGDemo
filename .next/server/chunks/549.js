@@ -1706,17 +1706,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(518);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(167);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _constants_constants_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(138);
-/* harmony import */ var web3__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(519);
-/* harmony import */ var web3__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(web3__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(689);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var http__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(685);
-/* harmony import */ var http__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(http__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var ethers__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(982);
-/* harmony import */ var ethers__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(ethers__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _constants_constants_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(138);
+/* harmony import */ var web3__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(519);
+/* harmony import */ var web3__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(web3__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var ethers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(982);
+/* harmony import */ var ethers__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(ethers__WEBPACK_IMPORTED_MODULE_6__);
 
 
 
@@ -1725,19 +1721,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
 function GetEXPBalance(tokenId) {
-    const [loading, setLoading] = (0,react__WEBPACK_IMPORTED_MODULE_6__.useState)(false);
-    const [posts, setPosts] = (0,react__WEBPACK_IMPORTED_MODULE_6__.useState)([]);
-    (0,react__WEBPACK_IMPORTED_MODULE_6__.useEffect)(()=>{
+    const [loading, setLoading] = (0,react__WEBPACK_IMPORTED_MODULE_5__.useState)(false);
+    const [posts, setPosts] = (0,react__WEBPACK_IMPORTED_MODULE_5__.useState)([]);
+    (0,react__WEBPACK_IMPORTED_MODULE_5__.useEffect)(()=>{
         const loadPost = async ()=>{
             await window.ethereum.enable();
-            const web3 = new (web3__WEBPACK_IMPORTED_MODULE_5___default())(window.ethereum);
+            const web3 = new (web3__WEBPACK_IMPORTED_MODULE_4___default())(window.ethereum);
             await window.ethereum.request({
                 method: "eth_requestAccounts"
             });
-            const EXP = new web3.eth.Contract(_constants_constants_js__WEBPACK_IMPORTED_MODULE_4__/* .expABI */ .OZ, _constants_constants_js__WEBPACK_IMPORTED_MODULE_4__/* .expContractAddress */ .RN);
+            const EXP = new web3.eth.Contract(_constants_constants_js__WEBPACK_IMPORTED_MODULE_3__/* .expABI */ .OZ, _constants_constants_js__WEBPACK_IMPORTED_MODULE_3__/* .expContractAddress */ .RN);
             // Till the data is fetch using API 
             // the Loading page will show.
             setLoading(true);
@@ -1747,7 +1741,7 @@ function GetEXPBalance(tokenId) {
                 from: ethereum.selectedAddress
             });
             // After fetching data stored it in posts state.
-            const balance = ethers__WEBPACK_IMPORTED_MODULE_8__.ethers.utils.formatEther(response);
+            const balance = ethers__WEBPACK_IMPORTED_MODULE_6__.ethers.utils.formatEther(response);
             setPosts(balance);
             // Closed the loading page
             setLoading(false);
@@ -1768,11 +1762,11 @@ function GetEXPBalance(tokenId) {
 }
 const inductSeanie = async (tokenId)=>{
     await window.ethereum.enable();
-    const web3 = new (web3__WEBPACK_IMPORTED_MODULE_5___default())(window.ethereum);
+    const web3 = new (web3__WEBPACK_IMPORTED_MODULE_4___default())(window.ethereum);
     await window.ethereum.request({
         method: "eth_requestAccounts"
     });
-    const shauniesNFT = new web3.eth.Contract(_constants_constants_js__WEBPACK_IMPORTED_MODULE_4__/* .battlerABI */ .Um, _constants_constants_js__WEBPACK_IMPORTED_MODULE_4__/* .battlerContract */ .g4);
+    const shauniesNFT = new web3.eth.Contract(_constants_constants_js__WEBPACK_IMPORTED_MODULE_3__/* .battlerABI */ .Um, _constants_constants_js__WEBPACK_IMPORTED_MODULE_3__/* .battlerContract */ .g4);
     await shauniesNFT.methods.inductShaunie(tokenId).send({
         from: ethereum.selectedAddress
     });
@@ -1789,16 +1783,16 @@ const levelUp = async (tokenId)=>{
     });
 };
 function App(tokenId) {
-    const [loading, setLoading] = (0,react__WEBPACK_IMPORTED_MODULE_6__.useState)(false);
-    const [posts, setPosts] = (0,react__WEBPACK_IMPORTED_MODULE_6__.useState)([]);
-    (0,react__WEBPACK_IMPORTED_MODULE_6__.useEffect)(()=>{
+    const [loading, setLoading] = (0,react__WEBPACK_IMPORTED_MODULE_5__.useState)(false);
+    const [posts, setPosts] = (0,react__WEBPACK_IMPORTED_MODULE_5__.useState)([]);
+    (0,react__WEBPACK_IMPORTED_MODULE_5__.useEffect)(()=>{
         const loadPost = async ()=>{
             await window.ethereum.enable();
-            const web3 = new (web3__WEBPACK_IMPORTED_MODULE_5___default())(window.ethereum);
+            const web3 = new (web3__WEBPACK_IMPORTED_MODULE_4___default())(window.ethereum);
             await window.ethereum.request({
                 method: "eth_requestAccounts"
             });
-            const shauniesNFT = new web3.eth.Contract(_constants_constants_js__WEBPACK_IMPORTED_MODULE_4__/* .abi */ .Mt, _constants_constants_js__WEBPACK_IMPORTED_MODULE_4__/* .contractAddress */ .iF);
+            const shauniesNFT = new web3.eth.Contract(_constants_constants_js__WEBPACK_IMPORTED_MODULE_3__/* .abi */ .Mt, _constants_constants_js__WEBPACK_IMPORTED_MODULE_3__/* .contractAddress */ .iF);
             // Till the data is fetch using API 
             // the Loading page will show.
             setLoading(true);
@@ -1819,16 +1813,16 @@ function App(tokenId) {
     return posts;
 }
 function LoadStats(tokenId) {
-    const [loading, setLoading] = (0,react__WEBPACK_IMPORTED_MODULE_6__.useState)(false);
-    const [posts, setPosts] = (0,react__WEBPACK_IMPORTED_MODULE_6__.useState)([]);
-    (0,react__WEBPACK_IMPORTED_MODULE_6__.useEffect)(()=>{
+    const [loading, setLoading] = (0,react__WEBPACK_IMPORTED_MODULE_5__.useState)(false);
+    const [posts, setPosts] = (0,react__WEBPACK_IMPORTED_MODULE_5__.useState)([]);
+    (0,react__WEBPACK_IMPORTED_MODULE_5__.useEffect)(()=>{
         const loadPost = async ()=>{
             await window.ethereum.enable();
-            const web3 = new (web3__WEBPACK_IMPORTED_MODULE_5___default())(window.ethereum);
+            const web3 = new (web3__WEBPACK_IMPORTED_MODULE_4___default())(window.ethereum);
             await window.ethereum.request({
                 method: "eth_requestAccounts"
             });
-            const RPGimporttes = new web3.eth.Contract(_constants_constants_js__WEBPACK_IMPORTED_MODULE_4__/* .battlerABI */ .Um, _constants_constants_js__WEBPACK_IMPORTED_MODULE_4__/* .battlerContract */ .g4);
+            const RPGimporttes = new web3.eth.Contract(_constants_constants_js__WEBPACK_IMPORTED_MODULE_3__/* .battlerABI */ .Um, _constants_constants_js__WEBPACK_IMPORTED_MODULE_3__/* .battlerContract */ .g4);
             // Till the data is fetch using API 
             // the Loading page will show.
             setLoading(true);
@@ -1859,11 +1853,11 @@ const NFTCard = ({ nft  })=>{
         });
     const getTokenIds = async ()=>{
         await window.ethereum.enable();
-        const web3 = new (web3__WEBPACK_IMPORTED_MODULE_5___default())(window.ethereum);
+        const web3 = new (web3__WEBPACK_IMPORTED_MODULE_4___default())(window.ethereum);
         await window.ethereum.request({
             method: "eth_requestAccounts"
         });
-        const RPGimporttes = new web3.eth.Contract(_constants_constants_js__WEBPACK_IMPORTED_MODULE_4__/* .abi */ .Mt, _constants_constants_js__WEBPACK_IMPORTED_MODULE_4__/* .contractAddress */ .iF);
+        const RPGimporttes = new web3.eth.Contract(_constants_constants_js__WEBPACK_IMPORTED_MODULE_3__/* .abi */ .Mt, _constants_constants_js__WEBPACK_IMPORTED_MODULE_3__/* .contractAddress */ .iF);
         const tokenId = await RPGimporttes.methods.getTokenIds().call({
             from: ethereum.selectedAddress
         });
@@ -1871,11 +1865,11 @@ const NFTCard = ({ nft  })=>{
     };
     async function Moveset(tokenId) {
         await window.ethereum.enable();
-        const web3 = new (web3__WEBPACK_IMPORTED_MODULE_5___default())(window.ethereum);
+        const web3 = new (web3__WEBPACK_IMPORTED_MODULE_4___default())(window.ethereum);
         await window.ethereum.request({
             method: "eth_requestAccounts"
         });
-        const RPGimporttes = new web3.eth.Contract(_constants_constants_js__WEBPACK_IMPORTED_MODULE_4__/* .abi */ .Mt, _constants_constants_js__WEBPACK_IMPORTED_MODULE_4__/* .contractAddress */ .iF);
+        const RPGimporttes = new web3.eth.Contract(_constants_constants_js__WEBPACK_IMPORTED_MODULE_3__/* .abi */ .Mt, _constants_constants_js__WEBPACK_IMPORTED_MODULE_3__/* .contractAddress */ .iF);
         const moveset = await RPGimporttes.methods.tokenURI(tokenId).call({
             from: ethereum.selectedAddress
         });

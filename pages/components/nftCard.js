@@ -2,11 +2,11 @@ import Head from "next/head";
 
 import styled from "styled-components";
 //import styles from "./apppractice/styles/Home.module.css";
-import axios from 'axios';
+
 import {contractAddress, abi, battlerABI, battlerContract, expABI,expContractAddress} from "/constants/constants.js"
 import Web3 from "web3";
 import { useState, useEffect } from 'react'
-import { get } from "http";
+
 import {ethers} from 'ethers'
 export function GetEXPBalance(tokenId) {
   

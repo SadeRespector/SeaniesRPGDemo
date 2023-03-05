@@ -6,7 +6,7 @@ import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { mainnet, polygon, optimism, arbitrum, goerli } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+
 import "./index.css";
 import { GetEXPBalance } from './components/nftCard';
 
@@ -45,13 +45,13 @@ function MyApp({ Component, pageProps }: AppProps) {
     <div className="min-h-screen gradient-bg-welcome">
       <GetEXPBalance></GetEXPBalance>
     <div >
-    <WagmiConfig client={wagmiClient}>
+    
       
-      <RainbowKitProvider chains={chains}>
+      
       
         <Component {...pageProps} />
-      </RainbowKitProvider>
-    </WagmiConfig>
+      
+    
     </div>
     </div>
   );

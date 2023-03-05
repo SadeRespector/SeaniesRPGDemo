@@ -71,14 +71,8 @@ function MyApp({ Component , pageProps  }) {
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_nftCard__WEBPACK_IMPORTED_MODULE_9__.GetEXPBalance, {}),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(wagmi__WEBPACK_IMPORTED_MODULE_4__.WagmiConfig, {
-                    client: wagmiClient,
-                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_rainbow_me_rainbowkit__WEBPACK_IMPORTED_MODULE_3__.RainbowKitProvider, {
-                        chains: chains,
-                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Component, {
-                            ...pageProps
-                        })
-                    })
+                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Component, {
+                    ...pageProps
                 })
             })
         ]
@@ -109,14 +103,6 @@ __webpack_async_result__();
 /***/ (() => {
 
 
-
-/***/ }),
-
-/***/ 167:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("axios");
 
 /***/ }),
 
@@ -205,14 +191,6 @@ module.exports = import("wagmi/providers/alchemy");;
 
 "use strict";
 module.exports = import("wagmi/providers/public");;
-
-/***/ }),
-
-/***/ 685:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("http");
 
 /***/ })
 

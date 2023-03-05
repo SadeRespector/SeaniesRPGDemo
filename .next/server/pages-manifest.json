@@ -2,8 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/api/hello": "pages/api/hello.js",
-  "/components/nftCard": "pages/components/nftCard.html",
   "/": "pages/index.html",
+  "/components/nftCard": "pages/components/nftCard.html",
   "/_document": "pages/_document.js",
   "/404": "pages/404.html"
 }
