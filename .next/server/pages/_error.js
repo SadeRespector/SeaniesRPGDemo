@@ -186,7 +186,7 @@ var _sideEffect = _interop_require_default(__webpack_require__(470));
 var _ampContext = __webpack_require__(918);
 var _headManagerContext = __webpack_require__(796);
 var _ampMode = __webpack_require__(732);
-var _warnOnce = __webpack_require__(618);
+var _warnOnce = __webpack_require__(513);
 function defaultHead(inAmpMode = false) {
     const head = [
         /*#__PURE__*/ _react.default.createElement("meta", {
@@ -360,7 +360,7 @@ module.exports = require("next/dist/shared/lib/side-effect.js");
 
 /***/ }),
 
-/***/ 618:
+/***/ 513:
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/utils/warn-once.js");

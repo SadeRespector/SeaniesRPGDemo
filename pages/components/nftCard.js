@@ -1,6 +1,4 @@
-import Head from "next/head";
 
-import styled from "styled-components";
 //import styles from "./apppractice/styles/Home.module.css";
 
 import {contractAddress, abi, battlerABI, battlerContract, expABI,expContractAddress} from "/constants/constants.js"

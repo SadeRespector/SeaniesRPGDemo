@@ -1,15 +1,13 @@
-import { ConnectButton } from '@rainbow-me/rainbowkit';
-import { NextPage } from 'next';
-import Head from 'next/head';
-//import styles from '../styles/Home.module.css';
+
+
 import {expABI, expContractAddress,abi,contractAddress} from "/constants/constants.js"
 
 import {NFTCard, App, LoadStats, GetEXPBalance} from "./components/nftCard"
-import detectEthereumProvider from '@metamask/detect-provider';
+
 import dynamic from 'next/dynamic';
 import Web3 from 'web3';
-import {ethers} from 'ethers'
-//import {abi, contractAddress} from "./constants/constants.js"
+
+
 import React, { useState, useEffect } from "react";
 const WEB3 = dynamic(()=>{return import("web3")}, {ssr:false})
 
